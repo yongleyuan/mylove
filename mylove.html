@@ -1,0 +1,126 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<title>My Love 1jun</title>
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+	<style type="text/css">
+		@font-face {
+			font-family: digit;
+			src: url('digital.ttf') format("truetype");
+		}
+	</style>
+	<link href="./css/default.css" type="text/css" rel="stylesheet">
+	<script type="text/javascript" src="./js/jquery.js"></script>
+	<script type="text/javascript" src="./js/garden.js"></script>
+	<script type="text/javascript" src="./js/functions.js"></script>
+</head>
+
+<body>
+<div id="mainDiv">
+	<div id="content">
+		<div id="code">
+			<span class="comments">##</span><br/>
+			<span class="comments"># I am a programmer, so I write codes to express my love</span><br/>
+			<span class="comments"># in coder's way on programmer's day.</span><br/>
+			<span class="comments"># I am not a romantic person, but I am going to try my best :)</span><br/>
+			<span class="comments"># This is for you, 1jun.</span><br/>
+			<span class="comments">##</span><br/>
+			<br/>
+			<span class="var">i</span> = Boy(<span class="string">"yyl"</span>);<br/>
+			<span class="var">u</span> = Girl(<span class="string">"1jun"</span>);<br/>
+			<span class="comments"># May 28, 2023, I met you in an ultimate frisbee game.</span><br/>
+			<span class="var">i</span>.<span class="func">meet</span>(<span class="var">u</span>, event=<span class="string">"frisbee"</span>)<br/>
+			<span class="var">u</span>.<span class="func">meet</span>(<span class="var">i</span>, event=<span class="string">"frisbee"</span>)<br/>
+			<span class="comments"># June 14, 2023, we went for a city walk for the first time.</span><br/>
+			<span class="func">citywalk</span>(<span class="var">u</span>, <span class="var">i</span>, location=<span class="string">"Tongzilin"</span>)<br/>
+			<span class="comments"># Since then, we chatted a lot and hung out multiple times.</span><br/>
+			<span class="func">chat</span>(<span class="var">u</span>, <span class="var">i</span>)<br/>
+			<span class="keyword1">for</span> _ <span class="keyword1">in</span> range(3):<br/>
+			<span class="placeholder"></span><span class="func">citywalk</span>(<span class="var">u</span>, <span class="var">i</span>, location=<span class="string">"Chengdu"</span>)<br/>
+			<span class="comments"># Afterwards, I confessed my love to you.</span><br/>
+			<span class="var">i</span>.<span class="func">confess</span>(<span class="var">u</span>, success=<span class="keyword">True</span>)<br/>
+			<span class="comments"># July 1, 2023, you became my girlfriend.</span><br/>
+			<span class="var">u</span>.<span class="func">accept</span>(<span class="var">i</span>)<br/>
+			<span class="comments"># Every day is happy day.</span><br/>
+			<span class="func">happy</span>(<span class="var">u</span>, <span class="var">i</span>)<br/>
+			<span class="comments"># We enjoy dining together.</span><br/>
+			<span class="func">dine</span>(<span class="var">u</span>, <span class="var">i</span>)<br/>
+			<span class="comments"># We enjoy watching movie together.</span><br/>
+			<span class="func">movie</span>(<span class="var">u</span>, <span class="var">i</span>)<br/>
+			<span class="comments"># We enjoy traveling together.</span><br/>
+			<span class="func">travel</span>(<span class="var">u</span>, <span class="var">i</span>)<br/>
+			<span class="comments"># We get more and more harmony in our lives.</span><br/>
+			<span class="var">i</span>.<span class="func">in_harmony</span>(<span class="var">u</span>)<br/>
+			<span class="var">u</span>.<span class="func">in_harmony</span>(<span class="var">i</span>)<br/>
+			<span class="comments"># You are the greatest love of my life.</span><br/>
+			<span class="comments"># I will only love you more.</span><br/>
+			<span class="keyword1">while</span> <span class="keyword">True</span>:<br/>
+			<span class="placeholder"></span><span class="var">u</span> = LOVE_OF_MY_LIFE<br/>
+			<span class="placeholder"></span><span class="var">i</span>.<span class="func">love</span>(<span class="var">u</span>, increase=<span class="keyword">True</span>)<br/>
+			<span class="comments"># Distance won't sabotage our relationship.</span><br/>
+			<span class="func">print</span>(<span class="string">"I love you forever."</span>)<br/>
+			<br/>
+			<span class="comments"># To Be Continued ...</span><br/>
+			<!-- while <span class="keyword">True</span>:<br/>
+			<span class="placeholder"></span><span class="keyword">if</span> u.with(i):<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>u = everything<br/>
+			<span class="placeholder"></span><span class="keyword">else</span>:<br/>
+			<span class="placeholder"></span><span class="placeholder"></span>everything = u<br/>
+			<span class="comments"># Waiting me marries you, we will be the happiest couple in the world.</span><br/>
+			i.marry(u, in_the_future=<span class="keyword">True</span>)<br/>
+			i.live_happily_forever_with(u)<br/>
+			<span class="comments"># I love you forever.</span><br/> -->
+		</div>
+		<div id="loveHeart">
+			<canvas id="garden"></canvas>
+			<div id="words">
+				<div id="messages">
+					Yijun "Jasmine" Xu, I am in love with you for
+					<div id="elapseClock"></div>
+				</div>
+				<div id="loveu">
+					Love u forever and ever.<br/>
+					Let's still walking.             <br/>
+					<div class="signature">- Yongle Yuan   &nbsp</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+<script type="text/javascript">
+	var offsetX = $("#loveHeart").width() / 2;
+	var offsetY = $("#loveHeart").height() / 2 - 55;
+	var together = new Date();
+	// 此处月份介于 0 ~ 11 之间。用本地时间表示，如 8 月要用 7 表示。
+	together.setFullYear(2023, 6, 1);
+	together.setHours(22);
+	together.setMinutes(30);
+	together.setSeconds(0);
+	together.setMilliseconds(0);
+
+	if (!document.createElement('canvas').getContext) {
+		var msg = document.createElement("div");
+		msg.id = "errorMsg";
+		msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+";
+		document.body.appendChild(msg);
+		$("#code").css("display", "none")
+		$("#copyright").css("position", "absolute");
+		$("#copyright").css("bottom", "10px");
+		document.execCommand("stop");
+	} else {
+		setTimeout(function () {
+			startHeartAnimation();
+		}, 5000);
+
+		timeElapse(together);
+		setInterval(function () {
+			timeElapse(together);
+		}, 500);
+
+		adjustCodePosition();
+		$("#code").typewriter();
+	}
+</script>
+</body>
+</html>
